@@ -35,6 +35,13 @@ public class OI extends Procedure {
 				context.startAsync(new Launch());
 			}
 
+			if (joystick1.getButtonPressed(2)) {
+				context.startAsync(new StartIntake());
+			}
+			if (joystick1.getButtonPressed(3)) {
+				context.startAsync(new StopIntake());
+			}
+
 			context.waitFor(() -> RobotProvider.instance.hasNewDriverStationData());
 		}
 	}
