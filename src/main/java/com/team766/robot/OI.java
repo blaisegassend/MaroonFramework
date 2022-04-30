@@ -28,7 +28,12 @@ public class OI extends Procedure {
 		while (true) {
 			// Add driver controls here - make sure to take/release ownership
 			// of mechanisms when appropriate.
-			
+			if (joystick2.getButtonPressed(1)) {
+				context.startAsync(new IncrementElevatorPosition());
+			}
+			if (joystick2.getButtonPressed(2)) {
+				context.startAsync(new DecrementElevatorPosition());
+			}
 
 			context.waitFor(() -> RobotProvider.instance.hasNewDriverStationData());
 		}

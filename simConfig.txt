@@ -72,7 +72,12 @@
 	},
 	"climber": {
 		"elevator": {
-			"deviceId": 10
+			"deviceId": 10,
+			"pid": {
+				"pGain": 0.05,
+				"iGain": 0.03,
+				"dGain": 0.001
+			},
 		},
 		"arms": {"port": 0}
 	},
